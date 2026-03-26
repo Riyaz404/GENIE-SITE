@@ -39,7 +39,7 @@ export function Footer() {
           className="glass-gold rounded-2xl p-8 md:p-12 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Find Your Dream <span className="text-gradient-gold">Luxury Home</span>
+            Find Your Dream <span className="text-green-700">Luxury Home</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             Let our expert team help you discover the perfect property in Hyderabad&apos;s most prestigious locations.
@@ -65,17 +65,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl font-serif">G</span>
-              </div>
+            <Link href="/" className="h-20 md:h-24 lg:h-28 overflow-hidden flex items-center">
+              <img
+                src="/logo.png"
+                alt="Logo"
+                 className="h-full scale-150 object-contain"
+              />
               <div>
-                <h3 className="text-xl font-bold font-serif tracking-wide text-gradient-gold">
-                  GENIE REALTY
-                </h3>
-                <p className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase">
-                  Luxury Properties
-                </p>
+               
               </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -97,7 +94,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif font-semibold mb-6 text-gradient-gold">Locations</h4>
+            <h4 className="font-serif font-semibold mb-6 text-green-700">Locations</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -114,7 +111,7 @@ export function Footer() {
 
           {/* Property Types */}
           <div>
-            <h4 className="font-serif font-semibold mb-6 text-gradient-gold">Property Types</h4>
+            <h4 className="font-serif font-semibold mb-6 text-green-700">Property Types</h4>
             <ul className="space-y-3">
               {propertyTypes.map((link) => (
                 <li key={link.href}>
@@ -127,7 +124,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <h4 className="font-serif font-semibold mb-4 mt-8 text-gradient-gold">Company</h4>
+            <h4 className="font-serif font-semibold mb-4 mt-8 text-green-700">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.href}>
@@ -144,7 +141,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-serif font-semibold mb-6 text-gradient-gold">Contact Us</h4>
+            <h4 className="font-serif font-semibold mb-6 text-green-700">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />

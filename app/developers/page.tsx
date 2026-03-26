@@ -49,7 +49,7 @@ export default function DevelopersPage() {
               Trusted Partners
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold mt-2 mb-4">
-              Top <span className="text-gradient-gold">Developers</span>
+              Top <span className="text-green-700">Developers</span>
             </h1>
             <p className="text-muted-foreground text-lg mb-8">
               We partner with India&apos;s most reputed real estate developers to bring you the finest luxury properties in Hyderabad.

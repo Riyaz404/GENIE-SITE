@@ -138,7 +138,7 @@ export default function HomePage() {
             >
               Discover Your
               <br />
-              <span className="text-gradient-gold">Dream Residence</span>
+              <span className="text-green-700">Dream Residence</span>
             </motion.h1>
 
             <motion.p
@@ -298,7 +298,7 @@ export default function HomePage() {
                 Handpicked for You
               </span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">
-                Featured <span className="text-gradient-gold">Luxury Projects</span>
+                Featured <span className="text-green-700">Luxury Projects</span>
               </h2>
               <p className="text-muted-foreground mt-3 max-w-xl">
                 Explore our curated selection of premium properties in Hyderabad&apos;s most
@@ -342,7 +342,7 @@ export default function HomePage() {
               Prime Locations
             </span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">
-              Explore by <span className="text-gradient-gold">Location</span>
+              Explore by <span className="text-green-700">Location</span>
             </h2>
           </motion.div>
 
@@ -404,12 +404,12 @@ export default function HomePage() {
                 Trusted Partners
               </span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">
-                Top <span className="text-gradient-gold">Developers</span>
+                Top <span className="text-green-700">Channels</span>
               </h2>
             </div>
             <Link href="/developers">
               <Button variant="outline" className="border-primary/30 gap-2">
-                View All Developers
+                View All  Trusted Partners
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
@@ -458,7 +458,7 @@ export default function HomePage() {
               Client Stories
             </span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">
-              What Our <span className="text-gradient-gold">Clients Say</span>
+              What Our <span className="text-green-700">Clients Say</span>
             </h2>
           </motion.div>
 

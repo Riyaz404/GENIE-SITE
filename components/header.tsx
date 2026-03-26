@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/properties', label: 'Properties' },
-  { href: '/developers', label: 'Developers' },
+  { href: '/developers', label: 'Channels' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -37,34 +37,29 @@ export function Header() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
           isScrolled
-            ? 'bg-background/95 backdrop-blur-lg border-b border-primary/20 py-3'
+            ? 'bg-background/90 backdrop-blur-lg border-b border-primary/20 py-3'
             : 'bg-transparent py-5'
         )}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+
+            {/* 🔥 Logo (Bigger + Clean) */}
+            <Link href="/">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-3"
+                className="flex items-center"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl font-serif">G</span>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold font-serif tracking-wide text-gradient-gold">
-                    GENIE REALTY
-                  </h1>
-                  <p className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase">
-                    Luxury Properties
-                  </p>
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Genie Realty"
+                   className="h-24 md:h-28 lg:h-32 w-auto object-contain scale-300"
+                />
               </motion.div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-10">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -85,23 +80,25 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Desktop Actions */}
+            {/* 🔥 Actions */}
             <div className="hidden lg:flex items-center gap-4">
+
               <Link href="/favorites">
                 <Button variant="ghost" size="icon" className="hover:text-primary">
                   <Heart className="w-5 h-5" />
                 </Button>
               </Link>
+
               <Link href="/compare">
                 <Button variant="ghost" size="icon" className="hover:text-primary">
                   <BarChart3 className="w-5 h-5" />
                 </Button>
               </Link>
-              <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
-              >
+
+              {/* 🔥 Bigger Phone Button */}
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-2 text-base font-semibold gap-2 rounded-xl shadow-md">
                 <Phone className="w-4 h-4" />
-                <span>+91 90638 77877</span>
+                +91 90638 77877
               </Button>
             </div>
 
@@ -114,6 +111,7 @@ export function Header() {
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
+
           </div>
         </div>
       </motion.header>
@@ -131,56 +129,32 @@ export function Header() {
               className="absolute inset-0 bg-background/95 backdrop-blur-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             />
+
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
               className="relative pt-24 px-6 flex flex-col gap-4"
             >
-              {navLinks.map((link, index) => (
-                <motion.div
+              {navLinks.map((link) => (
+                <Link
                   key={link.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 + index * 0.05 }}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    'text-2xl font-serif py-3 border-b border-border/50',
+                    pathname === link.href ? 'text-primary' : 'text-foreground'
+                  )}
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={cn(
-                      'block text-2xl font-serif py-3 border-b border-border/50 transition-colors',
-                      pathname === link.href ? 'text-primary' : 'text-foreground'
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
+                  {link.label}
+                </Link>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="mt-6 flex flex-col gap-3"
-              >
-                <div className="flex gap-3">
-                  <Link href="/favorites" className="flex-1">
-                    <Button variant="outline" className="w-full gap-2 border-primary/30">
-                      <Heart className="w-4 h-4" />
-                      Favorites
-                    </Button>
-                  </Link>
-                  <Link href="/compare" className="flex-1">
-                    <Button variant="outline" className="w-full gap-2 border-primary/30">
-                      <BarChart3 className="w-4 h-4" />
-                      Compare
-                    </Button>
-                  </Link>
-                </div>
-                <Button className="w-full bg-primary text-primary-foreground gap-2">
-                  <Phone className="w-4 h-4" />
+
+              <div className="mt-6 flex flex-col gap-3">
+                <Button className="w-full bg-primary text-primary-foreground gap-2 text-lg py-3">
+                  <Phone className="w-5 h-5" />
                   +91 90638 77877
                 </Button>
-              </motion.div>
+              </div>
             </motion.nav>
           </motion.div>
         )}
