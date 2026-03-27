@@ -232,7 +232,7 @@ export default function HomePage() {
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <p className="text-2xl md:text-3xl font-bold text-gradient-gold font-serif">
+                  <p className="text-2xl md:text-3xl font-bold text-green-700 font-serif">
                     {stat.value}
                   </p>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>

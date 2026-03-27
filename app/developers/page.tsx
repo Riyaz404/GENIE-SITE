@@ -88,7 +88,7 @@ export default function DevelopersPage() {
                 className="text-center p-6 glass rounded-xl"
               >
                 <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                <p className="text-2xl md:text-3xl font-bold text-gradient-gold font-serif">
+                <p className="text-2xl md:text-3xl font-bold text-green-700 font-serif">
                   {stat.value}
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
@@ -140,19 +140,19 @@ export default function DevelopersPage() {
 
                       <div className="grid grid-cols-3 gap-4 py-4 border-t border-border/30">
                         <div className="text-center">
-                          <p className="text-lg font-semibold text-gradient-gold">
+                          <p className="text-lg font-semibold text-green-700">
                             {developer.established}
                           </p>
                           <p className="text-xs text-muted-foreground">Est.</p>
                         </div>
                         <div className="text-center">
-                          <p className="text-lg font-semibold text-gradient-gold">
+                          <p className="text-lg font-semibold text-green-700">
                             {developer.projectsCompleted}+
                           </p>
                           <p className="text-xs text-muted-foreground">Projects</p>
                         </div>
                         <div className="text-center">
-                          <p className="text-lg font-semibold text-gradient-gold">
+                          <p className="text-lg font-semibold text-green-700">
                             {developer.ongoingProjects}
                           </p>
                           <p className="text-xs text-muted-foreground">Ongoing</p>
