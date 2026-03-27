@@ -53,7 +53,7 @@ export function Header() {
                 <img
                   src="/logo.png"
                   alt="Genie Realty"
-                   className="h-24 md:h-28 lg:h-32 w-auto object-contain scale-300"
+                   className="h-24 md:h-28 lg:h-32 w-auto object-contain scale-220"
                 />
               </motion.div>
             </Link>
@@ -97,7 +97,7 @@ export function Header() {
 
               {/* 🔥 Bigger Phone Button */}
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-2 text-base font-semibold gap-2 rounded-xl shadow-md">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-6 h-5" />
                 +91 90638 77877
               </Button>
             </div>
@@ -151,7 +151,7 @@ export function Header() {
 
               <div className="mt-6 flex flex-col gap-3">
                 <Button className="w-full bg-primary text-primary-foreground gap-2 text-lg py-3">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-7 h-5" />
                   +91 90638 77877
                 </Button>
               </div>

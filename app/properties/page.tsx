@@ -355,7 +355,7 @@ function PropertiesContent() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-              Luxury <span className="text-gradient-gold">Properties</span>
+              Luxury <span className="text-green-700">Properties</span>
             </h1>
             <p className="text-muted-foreground text-lg">
               Discover {filteredProperties.length} premium properties in Hyderabad&apos;s

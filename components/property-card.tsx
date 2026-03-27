@@ -141,7 +141,7 @@ export function PropertyCard({
         <Link href={`/properties/${property.id}`}>
           <div className="p-5">
             {/* Price */}
-            <p className="text-xl font-bold text-gradient-gold font-serif mb-1">
+            <p className="text-xl font-bold text-green-700 font-serif mb-1">
               ₹ {property.price}
             </p>
 

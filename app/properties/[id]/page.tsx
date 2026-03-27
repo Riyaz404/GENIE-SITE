@@ -260,7 +260,7 @@ export default function PropertyDetailsPage({ params }: PropertyDetailsPageProps
                 <div className="flex flex-wrap gap-6 p-6 glass rounded-xl">
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Price</p>
-                    <p className="text-2xl font-bold text-gradient-gold font-serif">
+                    <p className="text-2xl font-bold text-green-700 font-serif">
                       ₹ {property.price}
                     </p>
                   </div>
